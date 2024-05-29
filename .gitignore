@@ -1,0 +1,22 @@
+# media/after_filtering
+# media/after_gif
+# media/background_blur
+# media/background_change
+# media/background_remove
+# media/beautification
+# media/custom_background
+# media/custom_filter
+# media/custom_gif
+# media/face_focused
+# media/variant_images
+media/
+
+
+# *.jpg
+# *.png
+# *.gif
+artifacts/
+*.xml
+*.prototxt
+*.caffemodel
+hello
