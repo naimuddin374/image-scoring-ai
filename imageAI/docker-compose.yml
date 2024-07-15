@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+    container_name: image-scoring-container
+    ports:
+      - "8080:8080"
+    environment:
+      - NAME=World
+    volumes:
+      - .:/app
+    command: python manage.py runserver 0.0.0.0:8080
