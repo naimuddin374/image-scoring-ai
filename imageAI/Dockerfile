@@ -14,11 +14,7 @@ RUN apt-get update && apt-get install -y build-essential gcc
 RUN pip install --upgrade pip
 
 # Install dependencies
-RUN echo "Installing dependencies from PyPI..." && \
-    pip install --no-cache-dir -r requirements.txt -i https://pypi.org/simple --default-timeout=100 --verbose || \
-    echo "Primary index failed, attempting Tsinghua mirror..." && \
-    pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --default-timeout=100 --verbose || \
-    echo "Both installations failed, please check network connectivity and repository availability."
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Verify installation
 RUN echo "Installed packages:" && pip list
